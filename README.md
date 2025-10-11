@@ -28,6 +28,7 @@
 
 ### Custom Platforms
 - You can add your own platforms in the settings.
+- On [GitHub](https://github.com/saxc/search-on/blob/main/Platforms.md) you can find a list of platforms that can be added.
 
 ```json
 "searchOn.customPlatforms": [
