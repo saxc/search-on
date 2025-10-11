@@ -3,7 +3,7 @@
     "publisher": "saxc",
     "displayName": "Search On ...",
     "description": "Search On, is an editor extension that allows developers to easily search selected text across multiple platforms. With this extension, you can quickly access information from websites like Google, GitHub, MDN, and many others.",
-    "version": "25.10.1",
+    "version": "25.10.2",
     "engines": {
         "vscode": "^1.100.0"
     },
