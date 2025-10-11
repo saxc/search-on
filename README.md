@@ -12,7 +12,9 @@
 - GitHub
 - Google
 - MDN (Mozilla Developer Network)
+- Microsoft Learn
 - NPM (Node Package Manager)
+- NuGet
 - Reddit
 - Stack Overflow
 - Wikipedia

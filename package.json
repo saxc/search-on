@@ -105,6 +105,16 @@
                     "type": "boolean",
                     "default": true,
                     "description": "Search on CSS-Tricks"
+                },
+                "searchOn.nuGet": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Search on NuGet"
+                },
+                "searchOn.microsoftLearn": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Search on Microsoft Learn"
                 }
             }
         }
