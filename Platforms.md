@@ -20,7 +20,7 @@
 
 ## dict.cc
 ```json
-{ "label": "dct.cc", "url": "https://www.dict.cc/?s="}
+{ "label": "dict.cc", "url": "https://www.dict.cc/?s="}
 ```
 
 ## Docs.rs
