@@ -1,11 +1,18 @@
 {
     "name": "search-on",
+    "publisher": "saxc",
     "displayName": "Search On ...",
-    "description": "Search On ... is an editor extension that allows developers to easily search selected text across multiple platforms. With this extension, you can quickly access information from websites like Google, GitHub, MDN, and many others.",
-    "version": "0.0.1",
+    "description": "Search On, is an editor extension that allows developers to easily search selected text across multiple platforms. With this extension, you can quickly access information from websites like Google, GitHub, MDN, and many others.",
+    "version": "25.10.1",
     "engines": {
         "vscode": "^1.100.0"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/saxc/search-on"
+    },
+    "license": "MIT",
+    "icon": "images/logo.drawio.png",
     "categories": [
         "Other"
     ],
@@ -111,7 +118,7 @@
         "test": "vscode-test"
     },
     "devDependencies": {
-        "@types/vscode": "^1.105.0",
+        "@types/vscode": "^1.100.0",
         "@types/mocha": "^10.0.9",
         "@types/node": "20.x",
         "@typescript-eslint/eslint-plugin": "^8.10.0",

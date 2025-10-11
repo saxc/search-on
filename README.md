@@ -1,6 +1,12 @@
 # Search On ...
 **Search On ...** is an editor extension that allows developers to easily search selected text across multiple platforms. With this extension, you can quickly access information from websites like Google, GitHub, MDN, and many others.
 
+![](images/demo.gif)
+
+![](images/SearchOn.png)
+
+![](images/SelectPlatform.png)
+
 ## Included platforms
 - CSS-Tricks
 - GitHub
@@ -18,7 +24,7 @@
 - All included platforms can be enabled/disabled in the settings.
 
 ### Custom Platforms
--You can add your own platforms in the settings.
+- You can add your own platforms in the settings.
 
 ```json
 "searchOn.customPlatforms": [
@@ -26,3 +32,10 @@
     { "label": "eBay", "url": "https://www.ebay.com/sch/i.html?_nkw="}
 ]
 ```
+
+## Versioning
+YY.MM.VERSION
+
+- YY: Release year
+- MM: Release month
+- VERSION: Version in year/month
