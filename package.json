@@ -115,6 +115,11 @@
                     "type": "boolean",
                     "default": true,
                     "description": "Search on Microsoft Learn"
+                },
+                "searchOn.dockerHub": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Search on Docker Hub"
                 }
             }
         }

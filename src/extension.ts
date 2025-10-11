@@ -104,6 +104,10 @@ function getSearchPlatforms(): Platform[] {
     platforms.push({ label: "Microsoft Learn", url: "https://learn.microsoft.com/en-us/search/?terms=" });
   }
 
+  if (config.get<boolean>("dockerHub")) {
+    platforms.push({ label: "Docker Hub", url: "https://hub.docker.com/search?q=" });
+  }
+
   return platforms;
 }
 

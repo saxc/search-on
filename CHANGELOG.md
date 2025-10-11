@@ -2,6 +2,7 @@
 
 ## next
 - Add platforms
+  - Docker Hub
   - Microsoft Learn
   - NuGet
 

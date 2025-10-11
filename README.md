@@ -9,6 +9,7 @@
 
 ## Included platforms
 - CSS-Tricks
+- Docker Hub
 - GitHub
 - Google
 - MDN (Mozilla Developer Network)
