@@ -109,10 +109,13 @@ function getSearchPlatforms(): Platform[] {
 
 function sortPlatformsByLabel(platforms: Platform[]): Platform[] {
   return platforms.sort((a, b) => {
-    if (a.label < b.label) {
+    const labelA = a.label.toLowerCase();
+    const labelB = b.label.toLowerCase();
+
+    if (labelA < labelB) {
       return -1;
     }
-    if (a.label > b.label) {
+    if (labelA > labelB) {
       return 1;
     }
     return 0;
