@@ -8,7 +8,6 @@
 ![](images/SelectPlatform.png)
 
 ## Included platforms
-- CSS-Tricks
 - Docker Hub
 - GitHub
 - Google

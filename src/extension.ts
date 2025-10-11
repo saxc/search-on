@@ -92,10 +92,6 @@ function getSearchPlatforms(): Platform[] {
     platforms.push({ label: "NPM", url: "https://www.npmjs.com/search?q=" });
   }
 
-  if (config.get<boolean>("cssTricks")) {
-    platforms.push({ label: "CSS-Tricks", url: "https://css-tricks.com/?s=" });
-  }
-
   if (config.get<boolean>("nuGet")) {
     platforms.push({ label: "NuGet", url: "https://www.nuget.org/packages?q=" });
   }

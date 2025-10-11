@@ -13,6 +13,11 @@
 { "label": "Bing", "url": "https://www.bing.com/search?q="}
 ```
 
+## CSS-Tricks
+```json
+{ "label": "CSS-Tricks", "url": "https://css-tricks.com/?s="}
+```
+
 ## dict.cc
 ```json
 { "label": "dct.cc", "url": "https://www.dict.cc/?s="}

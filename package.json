@@ -101,11 +101,6 @@
                     "default": true,
                     "description": "Search on NPM (Node Package Manager)"
                 },
-                "searchOn.cssTricks": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Search on CSS-Tricks"
-                },
                 "searchOn.nuGet": {
                     "type": "boolean",
                     "default": true,
