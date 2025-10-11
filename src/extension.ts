@@ -96,6 +96,14 @@ function getSearchPlatforms(): Platform[] {
     platforms.push({ label: "CSS-Tricks", url: "https://css-tricks.com/?s=" });
   }
 
+  if (config.get<boolean>("nuGet")) {
+    platforms.push({ label: "NuGet", url: "https://www.nuget.org/packages?q=" });
+  }
+
+  if (config.get<boolean>("microsoftLearn")) {
+    platforms.push({ label: "Microsoft Learn", url: "https://learn.microsoft.com/en-us/search/?terms=" });
+  }
+
   return platforms;
 }
 
