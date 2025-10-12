@@ -29,10 +29,12 @@
 - You can add your own platforms in the settings.
 - On [GitHub](https://github.com/saxc/search-on/blob/main/Platforms.md) you can find a list of platforms that can be added.
 
+Example settings
 ```json
 "searchOn.customPlatforms": [
-    { "label": "Amazon", "url": "https://www.amazon.com/s?k="},
-    { "label": "eBay", "url": "https://www.ebay.com/sch/i.html?_nkw="}
+    { "label": "Google Translator", "url": "https://translate.google.com/?text="},
+    { "label": "Startpage", "url": "https://www.startpage.com/do/dsearch?q="},
+    { "label": "Amazon", "url": "https://www.amazon.com/s?k="}
 ]
 ```
 
