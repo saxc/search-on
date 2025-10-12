@@ -3,6 +3,15 @@
 - Additional platforms can be added via the custom platform settings.
 - Platforms that are not in English are marked with a tag at the end.
 
+Example settings
+```json
+"searchOn.customPlatforms": [
+    { "label": "Google Translator", "url": "https://translate.google.com/?text="},
+    { "label": "Startpage", "url": "https://www.startpage.com/do/dsearch?q="},
+    { "label": "Amazon", "url": "https://www.amazon.com/s?k="}
+]
+```
+
 ## Amazon
 ```json
 { "label": "Amazon", "url": "https://www.amazon.com/s?k="}
@@ -11,6 +20,11 @@
 ## Bing
 ```json
 { "label": "Bing", "url": "https://www.bing.com/search?q="}
+```
+
+## crates.io
+```json
+{ "label": "crates.io", "url": "https://crates.io/search?q="}
 ```
 
 ## CSS-Tricks
