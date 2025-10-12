@@ -16,6 +16,22 @@
     "categories": [
         "Other"
     ],
+    "keywords": [
+        "Search",
+        "Documentation",
+        "Customizable",
+        "DockerHub",
+        "GitHub",
+        "Google",
+        "MDN",
+        "MicrosoftLearn",
+        "NPM",
+        "NuGet",
+        "Reddit",
+        "StackOverflow",
+        "Wikipedia",
+        "YouTube"
+    ],
     "activationEvents": [],
     "main": "./out/extension.js",
     "contributes": {
