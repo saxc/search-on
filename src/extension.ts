@@ -77,7 +77,7 @@ function getSearchPlatforms(): Platform[] {
   if (config.get<boolean>("wikipedia")) {
     platforms.push({
       label: "Wikipedia",
-      url: "https://de.wikipedia.org/w/index.php?search=",
+      url: "https://wikipedia.org/w/index.php?search=",
     });
   }
 
