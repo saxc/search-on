@@ -8,17 +8,29 @@
 ![](images/SelectPlatform.png)
 
 ## Included platforms
-- Docker Hub
-- GitHub
-- Google
-- MDN (Mozilla Developer Network)
-- Microsoft Learn
-- NPM (Node Package Manager)
-- NuGet
-- Reddit
-- Stack Overflow
-- Wikipedia
-- YouTube
+- Enable by default
+  - Docker Hub
+  - GitHub
+  - Google
+  - MDN (Mozilla Developer Network)
+  - Microsoft Learn
+  - NPM (Node Package Manager)
+  - NuGet
+  - Stack Overflow
+  - Wikipedia
+  - YouTube
+
+- Disabled by default
+  - Bing
+  - crates.io
+  - CSS-Tricks
+  - dict.cc
+  - Docs.rs
+  - DuckDuckGo
+  - Google Translator
+  - PyPI
+  - Reddit
+  - Startpage
 
 ## Settings
 
