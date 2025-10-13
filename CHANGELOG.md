@@ -1,5 +1,9 @@
 # Change Log
 
+## next
+- Fix the language-specific Wikipedia link.
+- Add a "Search" command for manual search text.
+
 ## 25.10.2
 - Add platforms
   - Docker Hub

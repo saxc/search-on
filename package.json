@@ -38,8 +38,8 @@
         "commands": [
             {
                 "command": "search-on.search",
-                "title": "Search on ...",
-                "when": "false"
+                "title": "Search",
+                "category": "Search on"
             }
         ],
         "menus": {
