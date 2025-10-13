@@ -40,6 +40,11 @@
                 "command": "search-on.search",
                 "title": "Search",
                 "category": "Search on"
+            },
+            {
+                "command": "search-on.openSettings",
+                "title": "Open settings",
+                "category": "Search on"
             }
         ],
         "menus": {

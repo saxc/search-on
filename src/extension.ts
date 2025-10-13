@@ -4,6 +4,9 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
     vscode.commands.registerCommand("search-on.search", async () => {
       await searchOn();
+    }),
+    vscode.commands.registerCommand("search-on.openSettings", () => {
+        openSettings();
     })
   );
 }
@@ -137,4 +140,12 @@ function getCustomPlatforms(): Platform[] {
   const customPlatforms: Platform[] =
     config.get<Platform[]>("customPlatforms") || [];
   return customPlatforms;
+}
+
+
+function openSettings(){
+    const command = 'workbench.action.openSettings';
+    const args = { json: true, query: '@ext:saxc.search-on' };
+
+    vscode.commands.executeCommand(command, args);
 }

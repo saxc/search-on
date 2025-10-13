@@ -2,7 +2,8 @@
 
 ## next
 - Fix the language-specific Wikipedia link.
-- Add a "Search" command for manual search text.
+- Add `Search` command for manual search text.
+- Add the `Open Settings` command to open the settings and apply a filter for the extension.
 
 ## 25.10.2
 - Add platforms
