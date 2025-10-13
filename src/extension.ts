@@ -18,7 +18,17 @@ interface Platform {
 async function searchOn() {
   const editor = vscode.window.activeTextEditor;
   if (editor) {
-    const selectedText = editor.document.getText(editor.selection);
+    let selectedText = editor.document.getText(editor.selection);
+
+    if (selectedText === ''){
+        const input = await vscode.window.showInputBox({ prompt: 'Search for' });
+
+        if (input && input.trim() !== ''){
+            selectedText = input;
+        } else {
+            return;
+        }
+    }
 
     let platforms: Platform[] = [];
 
