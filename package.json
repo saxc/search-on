@@ -38,7 +38,7 @@
         "commands": [
             {
                 "command": "search-on.search",
-                "title": "Search",
+                "title": "Search On ...",
                 "category": "Search on"
             },
             {

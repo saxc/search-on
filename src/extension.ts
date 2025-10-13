@@ -1,36 +1,33 @@
-import * as vscode from "vscode";
+import * as vscode from 'vscode';
+import { Platform, PlatformsWiteSetting } from './interfaces';
+import { includedPlatforms } from './includedPlatforms';
 
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
-    vscode.commands.registerCommand("search-on.search", async () => {
+    vscode.commands.registerCommand('search-on.search', async () => {
       await searchOn();
     }),
-    vscode.commands.registerCommand("search-on.openSettings", () => {
-        openSettings();
+    vscode.commands.registerCommand('search-on.openSettings', () => {
+      openSettings();
     })
   );
 }
 
 export function deactivate() {}
 
-interface Platform {
-  label: string;
-  url: string;
-}
-
 async function searchOn() {
   const editor = vscode.window.activeTextEditor;
   if (editor) {
     let selectedText = editor.document.getText(editor.selection);
 
-    if (selectedText === ''){
-        const input = await vscode.window.showInputBox({ prompt: 'Search for' });
+    if (selectedText === '') {
+      const input = await vscode.window.showInputBox({ prompt: 'Search for' });
 
-        if (input && input.trim() !== ''){
-            selectedText = input;
-        } else {
-            return;
-        }
+      if (input && input.trim() !== '') {
+        selectedText = input;
+      } else {
+        return;
+      }
     }
 
     let platforms: Platform[] = [];
@@ -41,7 +38,7 @@ async function searchOn() {
     platforms = sortPlatformsByLabel(platforms);
 
     const pick = await vscode.window.showQuickPick(platforms, {
-      placeHolder: "Select a search platform",
+      placeHolder: 'Select a search platform',
     });
     if (pick) {
       const searchUrl = pick.url + encodeURIComponent(selectedText);
@@ -53,69 +50,13 @@ async function searchOn() {
 function getSearchPlatforms(): Platform[] {
   let platforms: Platform[] = [];
 
-  const config = vscode.workspace.getConfiguration("searchOn");
+  const config = vscode.workspace.getConfiguration('searchOn');
 
-  if (config.get<boolean>("google")) {
-    platforms.push({
-      label: "Google",
-      url: "https://www.google.com/search?q=",
-    });
-  }
-
-  if (config.get<boolean>("gitHub")) {
-    platforms.push({ label: "GitHub", url: "https://github.com/search?q=" });
-  }
-
-  if (config.get<boolean>("MDN")) {
-    platforms.push({
-      label: "MDN",
-      url: "https://developer.mozilla.org/en-US/search?q=",
-    });
-  }
-
-  if (config.get<boolean>("reddit")) {
-    platforms.push({
-      label: "Reddit",
-      url: "https://www.reddit.com/search?q=",
-    });
-  }
-
-  if (config.get<boolean>("stackOverflow")) {
-    platforms.push({
-      label: "Stack Overflow",
-      url: "https://stackoverflow.com/search?q=",
-    });
-  }
-
-  if (config.get<boolean>("wikipedia")) {
-    platforms.push({
-      label: "Wikipedia",
-      url: "https://wikipedia.org/w/index.php?search=",
-    });
-  }
-
-  if (config.get<boolean>("youTube")) {
-    platforms.push({
-      label: "YouTube",
-      url: "https://www.youtube.com/results?search_query=",
-    });
-  }
-
-  if (config.get<boolean>("NPM")) {
-    platforms.push({ label: "NPM", url: "https://www.npmjs.com/search?q=" });
-  }
-
-  if (config.get<boolean>("nuGet")) {
-    platforms.push({ label: "NuGet", url: "https://www.nuget.org/packages?q=" });
-  }
-
-  if (config.get<boolean>("microsoftLearn")) {
-    platforms.push({ label: "Microsoft Learn", url: "https://learn.microsoft.com/en-us/search/?terms=" });
-  }
-
-  if (config.get<boolean>("dockerHub")) {
-    platforms.push({ label: "Docker Hub", url: "https://hub.docker.com/search?q=" });
-  }
+  includedPlatforms.forEach((platform) => {
+    if (config.get<boolean>(platform.setting)) {
+      platforms.push(platform);
+    }
+  });
 
   return platforms;
 }
@@ -136,16 +77,15 @@ function sortPlatformsByLabel(platforms: Platform[]): Platform[] {
 }
 
 function getCustomPlatforms(): Platform[] {
-  const config = vscode.workspace.getConfiguration("searchOn");
+  const config = vscode.workspace.getConfiguration('searchOn');
   const customPlatforms: Platform[] =
-    config.get<Platform[]>("customPlatforms") || [];
+    config.get<Platform[]>('customPlatforms') || [];
   return customPlatforms;
 }
 
+function openSettings() {
+  const command = 'workbench.action.openSettings';
+  const args = { json: true, query: '@ext:saxc.search-on' };
 
-function openSettings(){
-    const command = 'workbench.action.openSettings';
-    const args = { json: true, query: '@ext:saxc.search-on' };
-
-    vscode.commands.executeCommand(command, args);
+  vscode.commands.executeCommand(command, args);
 }
