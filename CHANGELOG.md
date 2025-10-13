@@ -1,9 +1,21 @@
 # Change Log
 
-## next
-- Fix the language-specific Wikipedia link.
+## 25.10.3
 - Add `Search` command for manual search text.
 - Add the `Open Settings` command to open the settings and apply a filter for the extension.
+- Add new platforms (Disabled by default)
+  - Bing
+  - crates.io
+  - CSS-Tricks
+  - dict.cc
+  - Docs.rs
+  - DuckDuckGo
+  - Google Translator
+  - PyPI
+  - Reddit
+  - Startpage
+- Change Reddit to disabled by default
+- Fix the language-specific Wikipedia link.
 
 ## 25.10.2
 - Add platforms

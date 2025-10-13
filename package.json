@@ -3,7 +3,7 @@
     "publisher": "saxc",
     "displayName": "Search On ...",
     "description": "Search On, is an editor extension that allows developers to easily search selected text across multiple platforms. With this extension, you can quickly access information from websites like Google, GitHub, MDN, and many others.",
-    "version": "25.10.2",
+    "version": "25.10.3",
     "engines": {
         "vscode": "^1.100.0"
     },
@@ -20,15 +20,24 @@
         "Search",
         "Documentation",
         "Customizable",
+        "Bing",
+        "crates.io",
+        "CSS-Tricks",
+        "dict.cc",
         "DockerHub",
+        "Docs.rs",
+        "DuckDuckGo",
         "GitHub",
+        "Google Translator",
         "Google",
         "MDN",
         "MicrosoftLearn",
         "NPM",
         "NuGet",
+        "PyPI",
         "Reddit",
         "StackOverflow",
+        "Startpage",
         "Wikipedia",
         "YouTube"
     ],
@@ -82,40 +91,65 @@
                     "default": [],
                     "description": "Add your own platforms. See the README for further details."
                 },
-                "searchOn.google": {
+                "searchOn.bing": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on Bing"
+                },
+                "searchOn.cratesIo": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on crates.io"
+                },
+                "searchOn.cssTricks": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on CSS-Tricks"
+                },
+                "searchOn.dictCc": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on dict.cc"
+                },
+                "searchOn.docsRs": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on Docs.rs"
+                },
+                "searchOn.dockerHub": {
                     "type": "boolean",
                     "default": true,
-                    "description": "Search on Google"
+                    "description": "Search on Docker Hub"
+                },
+                "searchOn.duckDuckGo": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on DuckDuckGo"
                 },
                 "searchOn.gitHub": {
                     "type": "boolean",
                     "default": true,
                     "description": "Search on GitHub"
                 },
+                "searchOn.google": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Search on Google"
+                },
+                "searchOn.googleTranslator": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on Google Translator"
+                },
                 "searchOn.MDN": {
                     "type": "boolean",
                     "default": true,
                     "description": "Search on MDN (Mozilla Developer Network)"
                 },
-                "searchOn.reddit": {
+                "searchOn.microsoftLearn": {
                     "type": "boolean",
                     "default": true,
-                    "description": "Search on Reddit"
-                },
-                "searchOn.stackOverflow": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Search on Stack Overflow"
-                },
-                "searchOn.wikipedia": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Search on Wikipedia"
-                },
-                "searchOn.youTube": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Search on YouTube"
+                    "description": "Search on Microsoft Learn"
                 },
                 "searchOn.NPM": {
                     "type": "boolean",
@@ -127,15 +161,35 @@
                     "default": true,
                     "description": "Search on NuGet"
                 },
-                "searchOn.microsoftLearn": {
+                "searchOn.pyPI": {
                     "type": "boolean",
-                    "default": true,
-                    "description": "Search on Microsoft Learn"
+                    "default": false,
+                    "description": "Search on PyPI"
                 },
-                "searchOn.dockerHub": {
+                "searchOn.reddit": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on Reddit"
+                },
+                "searchOn.stackOverflow": {
                     "type": "boolean",
                     "default": true,
-                    "description": "Search on Docker Hub"
+                    "description": "Search on Stack Overflow"
+                },
+                "searchOn.startpage": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on Startpage"
+                },
+                "searchOn.wikipedia": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Search on Wikipedia"
+                },
+                "searchOn.youTube": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Search on YouTube"
                 }
             }
         }
