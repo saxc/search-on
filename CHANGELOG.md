@@ -1,5 +1,8 @@
 # Change Log
 
+## next
+- Add optional `{{search_term}}` for the URL, if no `{{search_term}}` specified, it will be appended to the end of the URL.
+
 ## 25.10.3
 - Add `Search` command for manual search text.
 - Add the `Open Settings` command to open the settings and apply a filter for the extension.
@@ -12,7 +15,6 @@
   - DuckDuckGo
   - Google Translator
   - PyPI
-  - Reddit
   - Startpage
 - Change Reddit to disabled by default
 - Fix the language-specific Wikipedia link.
