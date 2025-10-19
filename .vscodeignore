@@ -9,3 +9,8 @@ vsc-extension-quickstart.md
 **/*.map
 **/*.ts
 **/.vscode-test.*
+
+src/test/
+out/test/
+images/*
+!images/logo.drawio.png
