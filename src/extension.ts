@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import { Platform } from "./interfaces";
+import { Platform, PlatformsWiteSetting } from "./interfaces";
 import { includedPlatforms } from "./includedPlatforms";
 
 export function activate(context: vscode.ExtensionContext) {
@@ -9,6 +9,12 @@ export function activate(context: vscode.ExtensionContext) {
     }),
     vscode.commands.registerCommand("search-on.openSettings", () => {
       openSettings();
+    }),
+    vscode.commands.registerCommand("search-on.enablePlatform", async () => {
+      await setPlatformTo(true);
+    }),
+    vscode.commands.registerCommand("search-on.disablePlatform", async () => {
+      await setPlatformTo(false);
     })
   );
 }
@@ -32,7 +38,7 @@ async function searchOn() {
 
     let platforms: Platform[] = [];
 
-    platforms.push(...getSearchPlatforms());
+    platforms.push(...getSearchPlatforms(true));
     platforms.push(...getCustomPlatforms());
 
     platforms = sortPlatformsByLabel(platforms);
@@ -55,13 +61,13 @@ async function searchOn() {
   }
 }
 
-function getSearchPlatforms(): Platform[] {
-  let platforms: Platform[] = [];
+function getSearchPlatforms(settingsValue: boolean): PlatformsWiteSetting[] {
+  let platforms: PlatformsWiteSetting[] = [];
 
   const config = vscode.workspace.getConfiguration("searchOn");
 
   includedPlatforms.forEach((platform) => {
-    if (config.get<boolean>(platform.setting)) {
+    if (config.get<boolean>(platform.setting) == settingsValue) {
       platforms.push(platform);
     }
   });
@@ -96,4 +102,19 @@ function openSettings() {
   const args = { json: true, query: "@ext:saxc.search-on" };
 
   vscode.commands.executeCommand(command, args);
+}
+
+async function setPlatformTo(setTo: boolean) {
+  let platforms = getSearchPlatforms(!setTo);
+
+  let setToNamed = setTo ? "enable" : "disable";
+
+  const pick = await vscode.window.showQuickPick(platforms, {
+    placeHolder: "Select a search platform to " + setToNamed,
+  });
+
+  if (pick) {
+    const config = vscode.workspace.getConfiguration("searchOn");
+    config.update(pick.setting, setTo, vscode.ConfigurationTarget.Global);
+  }
 }

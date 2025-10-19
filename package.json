@@ -54,6 +54,16 @@
                 "command": "search-on.openSettings",
                 "title": "Open settings",
                 "category": "Search on"
+            },
+            {
+                "command": "search-on.enablePlatform",
+                "title": "Enable platform",
+                "category": "Search on"
+            },
+            {
+                "command": "search-on.disablePlatform",
+                "title": "Disable platform",
+                "category": "Search on"
             }
         ],
         "menus": {
