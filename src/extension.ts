@@ -1,13 +1,13 @@
-import * as vscode from 'vscode';
-import { Platform, PlatformsWiteSetting } from './interfaces';
-import { includedPlatforms } from './includedPlatforms';
+import * as vscode from "vscode";
+import { Platform } from "./interfaces";
+import { includedPlatforms } from "./includedPlatforms";
 
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
-    vscode.commands.registerCommand('search-on.search', async () => {
+    vscode.commands.registerCommand("search-on.search", async () => {
       await searchOn();
     }),
-    vscode.commands.registerCommand('search-on.openSettings', () => {
+    vscode.commands.registerCommand("search-on.openSettings", () => {
       openSettings();
     })
   );
@@ -20,10 +20,10 @@ async function searchOn() {
   if (editor) {
     let selectedText = editor.document.getText(editor.selection);
 
-    if (selectedText === '') {
-      const input = await vscode.window.showInputBox({ prompt: 'Search for' });
+    if (selectedText === "") {
+      const input = await vscode.window.showInputBox({ prompt: "Search for" });
 
-      if (input && input.trim() !== '') {
+      if (input && input.trim() !== "") {
         selectedText = input;
       } else {
         return;
@@ -38,10 +38,18 @@ async function searchOn() {
     platforms = sortPlatformsByLabel(platforms);
 
     const pick = await vscode.window.showQuickPick(platforms, {
-      placeHolder: 'Select a search platform',
+      placeHolder: "Select a search platform",
     });
+
     if (pick) {
-      const searchUrl = pick.url + encodeURIComponent(selectedText);
+      const searchTerm = encodeURIComponent(selectedText);
+
+      let searchUrl = pick.url.replace("{{search_term}}", searchTerm);
+
+      if (searchUrl === pick.url) {
+        searchUrl = pick.url + searchTerm;
+      }
+
       vscode.env.openExternal(vscode.Uri.parse(searchUrl));
     }
   }
@@ -50,7 +58,7 @@ async function searchOn() {
 function getSearchPlatforms(): Platform[] {
   let platforms: Platform[] = [];
 
-  const config = vscode.workspace.getConfiguration('searchOn');
+  const config = vscode.workspace.getConfiguration("searchOn");
 
   includedPlatforms.forEach((platform) => {
     if (config.get<boolean>(platform.setting)) {
@@ -77,15 +85,15 @@ function sortPlatformsByLabel(platforms: Platform[]): Platform[] {
 }
 
 function getCustomPlatforms(): Platform[] {
-  const config = vscode.workspace.getConfiguration('searchOn');
+  const config = vscode.workspace.getConfiguration("searchOn");
   const customPlatforms: Platform[] =
-    config.get<Platform[]>('customPlatforms') || [];
+    config.get<Platform[]>("customPlatforms") || [];
   return customPlatforms;
 }
 
 function openSettings() {
-  const command = 'workbench.action.openSettings';
-  const args = { json: true, query: '@ext:saxc.search-on' };
+  const command = "workbench.action.openSettings";
+  const args = { json: true, query: "@ext:saxc.search-on" };
 
   vscode.commands.executeCommand(command, args);
 }

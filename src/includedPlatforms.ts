@@ -48,7 +48,7 @@ export const includedPlatforms: PlatformsWiteSetting[] = [
   },
   {
     label: "Google",
-    url: "https://www.google.com/search?q=",
+    url: "https://www.google.com/search?q={{search_term}}",
     setting: "google",
   },
   {
