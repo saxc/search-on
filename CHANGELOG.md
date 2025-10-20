@@ -1,6 +1,6 @@
 # Change Log
 
-## next
+## 25.10.4
 - Optimize package size
 - Add optional `{{search_term}}` for the URL, if no `{{search_term}}` specified, it will be appended to the end of the URL.
 - Add commands for `Enable platform` and `Disable platform`.
