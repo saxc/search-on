@@ -36,6 +36,13 @@
 
 ### Platforms
 - All included platforms can be enabled/disabled in the settings.
+- Call `Open settings` to go to a pre-filter settings page.
+
+![](images/OpenSettings.gif)
+
+- Enable/disable platforms directly by calling `Enable platform` or `Disable platform`.
+
+![](images/EnableDisablePlatform.gif)
 
 ### Custom Platforms
 - You can add your own platforms in the settings.
