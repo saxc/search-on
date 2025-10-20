@@ -32,6 +32,11 @@ export const includedPlatforms: PlatformsWiteSetting[] = [
     setting: "dockerHub",
   },
   {
+    label: "Ecosia",
+    url: "https://www.ecosia.org/search?q={{search_term}}",
+    setting: "ecosia",
+  },
+  {
     label: "DuckDuckGo",
     url: "https://duckduckgo.com/?q=",
     setting: "duckDuckGo",
@@ -75,6 +80,11 @@ export const includedPlatforms: PlatformsWiteSetting[] = [
     label: "PyPI",
     url: "https://pypi.org/search/?q=",
     setting: "pyPI",
+  },
+  {
+    label: "Python",
+    url: "https://docs.python.org/3/search.html?q={{search_term}}",
+    setting: "python",
   },
   {
     label: "Reddit",

@@ -24,17 +24,19 @@
         "crates.io",
         "CSS-Tricks",
         "dict.cc",
-        "DockerHub",
+        "Docker Hub",
         "Docs.rs",
         "DuckDuckGo",
+        "Ecosia",
         "GitHub",
         "Google Translator",
         "Google",
         "MDN",
-        "MicrosoftLearn",
+        "Microsoft Learn",
         "NPM",
         "NuGet",
         "PyPI",
+        "Python",
         "Reddit",
         "StackOverflow",
         "Startpage",
@@ -136,6 +138,11 @@
                     "default": false,
                     "description": "Search on DuckDuckGo"
                 },
+                "searchOn.ecosia": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on Ecosia"
+                },
                 "searchOn.gitHub": {
                     "type": "boolean",
                     "default": true,
@@ -175,6 +182,11 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Search on PyPI"
+                },
+                "searchOn.python": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on Python documentation"
                 },
                 "searchOn.reddit": {
                     "type": "boolean",

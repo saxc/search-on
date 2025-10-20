@@ -27,8 +27,10 @@
   - dict.cc
   - Docs.rs
   - DuckDuckGo
+  - Ecosia
   - Google Translator
   - PyPI
+  - Python
   - Reddit
   - Startpage
 
