@@ -52,6 +52,11 @@ export const includedPlatforms: PlatformsWiteSetting[] = [
     setting: "googleTranslator",
   },
   {
+    label: "Kotlin",
+    url: "https://kotlinlang.org/docs/home.html?q={{search_term}}&s=full",
+    setting: "kotlin",
+  },
+  {
     label: "Google",
     url: "https://www.google.com/search?q={{search_term}}",
     setting: "google",

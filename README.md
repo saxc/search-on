@@ -29,6 +29,7 @@
   - DuckDuckGo
   - Ecosia
   - Google Translator
+  - Kotlin
   - PyPI
   - Python
   - Reddit
