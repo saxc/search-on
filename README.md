@@ -1,6 +1,10 @@
 # Search On ...
 **Search On ...** is an editor extension that allows developers to easily search selected text across multiple platforms. With this extension, you can quickly access information from websites like Google, GitHub, MDN, and many others.
 
+[![Open VSX Downloads](https://img.shields.io/open-vsx/dt/saxc/search-on?label=Open%20VSX)
+](https://open-vsx.org/extension/saxc/search-on)
+[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/saxc.search-on?label=Visual%20Studio%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=saxc.search-on)
+
 ![](images/demo.gif)
 
 ![](images/SearchOn.png)
