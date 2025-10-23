@@ -17,6 +17,11 @@ export const includedPlatforms: PlatformsWiteSetting[] = [
     setting: "cssTricks",
   },
   {
+    label: "devdocs.io",
+    url: "https://devdocs.io/#q=",
+    setting: "devdocs",
+  },
+  {
     label: "dict.cc",
     url: "https://www.dict.cc/?s=",
     setting: "dictCc",

@@ -2,6 +2,7 @@
 
 ## next
 - Add new platforms (Disabled by default)
+  - devdocs.io
   - Kotlin
 
 ## 25.10.4

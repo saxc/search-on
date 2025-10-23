@@ -28,6 +28,7 @@
   - Bing
   - crates.io
   - CSS-Tricks
+  - devdocs.io
   - dict.cc
   - Docs.rs
   - DuckDuckGo

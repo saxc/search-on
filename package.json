@@ -119,6 +119,11 @@
                     "default": false,
                     "description": "Search on CSS-Tricks"
                 },
+                "searchOn.devdocs": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on devdocs.is"
+                },
                 "searchOn.dictCc": {
                     "type": "boolean",
                     "default": false,
