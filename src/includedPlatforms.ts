@@ -7,6 +7,11 @@ export const includedPlatforms: PlatformsWiteSetting[] = [
     setting: "bing",
   },
   {
+    label: "Brave",
+    url: "https://search.brave.com/search?q={{search_term}}",
+    setting: "brave",
+  },
+  {
     label: "crates.io",
     url: "https://crates.io/search?q={{search_term}}",
     setting: "cratesIo",

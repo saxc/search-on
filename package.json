@@ -21,6 +21,7 @@
         "Documentation",
         "Customizable",
         "Bing",
+        "Brave",
         "crates.io",
         "CSS-Tricks",
         "dict.cc",
@@ -108,6 +109,11 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Search on Bing"
+                },
+                "searchOn.brave": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on Brave"
                 },
                 "searchOn.cratesIo": {
                     "type": "boolean",

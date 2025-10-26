@@ -26,6 +26,7 @@
 
 - Disabled by default
   - Bing
+  - Brave
   - crates.io
   - CSS-Tricks
   - devdocs.io
