@@ -30,6 +30,7 @@
         "Docs.rs",
         "DuckDuckGo",
         "Ecosia",
+        "git",
         "GitHub",
         "Google Translator",
         "Google",
@@ -43,6 +44,8 @@
         "Reddit",
         "StackOverflow",
         "Startpage",
+        "Visual Studio Code",
+        "VS Code",
         "Wikipedia",
         "YouTube"
     ],
@@ -156,6 +159,11 @@
                     "default": false,
                     "description": "Search on Ecosia"
                 },
+                "searchOn.git": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on git"
+                },
                 "searchOn.gitHub": {
                     "type": "boolean",
                     "default": true,
@@ -220,6 +228,11 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Search on Startpage"
+                },
+                "searchOn.vs-code": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on VS Code"
                 },
                 "searchOn.wikipedia": {
                     "type": "boolean",

@@ -34,12 +34,14 @@
   - Docs.rs
   - DuckDuckGo
   - Ecosia
+  - git
   - Google Translator
   - Kotlin
   - PyPI
   - Python
   - Reddit
   - Startpage
+  - VS Code
 
 ## Settings
 

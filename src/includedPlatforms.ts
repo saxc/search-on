@@ -52,6 +52,11 @@ export const includedPlatforms: PlatformsWiteSetting[] = [
     setting: "duckDuckGo",
   },
   {
+    label: "git",
+    url: "https://git-scm.com/search/results?search={{search_term}}",
+    setting: "git",
+  },
+  {
     label: "GitHub",
     url: "https://github.com/search?q={{search_term}}",
     setting: "gitHub",
@@ -115,6 +120,11 @@ export const includedPlatforms: PlatformsWiteSetting[] = [
     label: "Startpage",
     url: "https://www.startpage.com/do/dsearch?q={{search_term}}",
     setting: "startpage",
+  },
+  {
+    label: "VS Code",
+    url: "https://code.visualstudio.com/Search?q={{search_term}}",
+    setting: "vs-code",
   },
   {
     label: "Wikipedia",

@@ -4,7 +4,9 @@
 - Add new platforms (Disabled by default)
   - Brave
   - devdocs.io
+  - git
   - Kotlin
+  - VS Code
 
 ## 25.10.4
 - Optimize package size
