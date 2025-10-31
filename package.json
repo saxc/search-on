@@ -21,16 +21,20 @@
         "Documentation",
         "Customizable",
         "Bing",
+        "Brave",
         "crates.io",
         "CSS-Tricks",
+        "devdocs.io",
         "dict.cc",
         "Docker Hub",
         "Docs.rs",
         "DuckDuckGo",
         "Ecosia",
+        "git",
         "GitHub",
         "Google Translator",
         "Google",
+        "Kotlin",
         "MDN",
         "Microsoft Learn",
         "NPM",
@@ -40,6 +44,8 @@
         "Reddit",
         "StackOverflow",
         "Startpage",
+        "Visual Studio Code",
+        "VS Code",
         "Wikipedia",
         "YouTube"
     ],
@@ -108,6 +114,11 @@
                     "default": false,
                     "description": "Search on Bing"
                 },
+                "searchOn.brave": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on Brave"
+                },
                 "searchOn.cratesIo": {
                     "type": "boolean",
                     "default": false,
@@ -117,6 +128,11 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Search on CSS-Tricks"
+                },
+                "searchOn.devdocs": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on devdocs.is"
                 },
                 "searchOn.dictCc": {
                     "type": "boolean",
@@ -143,6 +159,11 @@
                     "default": false,
                     "description": "Search on Ecosia"
                 },
+                "searchOn.git": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on git"
+                },
                 "searchOn.gitHub": {
                     "type": "boolean",
                     "default": true,
@@ -157,6 +178,11 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Search on Google Translator"
+                },
+                "searchOn.kotlin": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on Kotlin"
                 },
                 "searchOn.MDN": {
                     "type": "boolean",
@@ -202,6 +228,11 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Search on Startpage"
+                },
+                "searchOn.vs-code": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on VS Code"
                 },
                 "searchOn.wikipedia": {
                     "type": "boolean",

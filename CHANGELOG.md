@@ -1,5 +1,13 @@
 # Change Log
 
+## next
+- Add new platforms (Disabled by default)
+  - Brave
+  - devdocs.io
+  - git
+  - Kotlin
+  - VS Code
+
 ## 25.10.4
 - Optimize package size
 - Add optional `{{search_term}}` for the URL, if no `{{search_term}}` specified, it will be appended to the end of the URL.

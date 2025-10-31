@@ -26,17 +26,22 @@
 
 - Disabled by default
   - Bing
+  - Brave
   - crates.io
   - CSS-Tricks
+  - devdocs.io
   - dict.cc
   - Docs.rs
   - DuckDuckGo
   - Ecosia
+  - git
   - Google Translator
+  - Kotlin
   - PyPI
   - Python
   - Reddit
   - Startpage
+  - VS Code
 
 ## Settings
 

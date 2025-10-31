@@ -41,7 +41,7 @@ async function searchOn() {
     platforms.push(...getSearchPlatforms(true));
     platforms.push(...getCustomPlatforms());
 
-    platforms = sortPlatformsByLabel(platforms);
+    platforms = sortPlatformsByLabel<Platform>(platforms);
 
     const pick = await vscode.window.showQuickPick(platforms, {
       placeHolder: "Select a search platform",
@@ -74,20 +74,15 @@ function getSearchPlatforms(settingsValue: boolean): PlatformsWiteSetting[] {
 
   return platforms;
 }
+function sortPlatformsByLabel<T extends { label?: string }>(platforms: T[]): T[] {
+    return platforms.sort((a, b) => {
+        const labelA = (a.label || "").toLowerCase();
+        const labelB = (b.label || "").toLowerCase();
 
-function sortPlatformsByLabel(platforms: Platform[]): Platform[] {
-  return platforms.sort((a, b) => {
-    const labelA = a.label.toLowerCase();
-    const labelB = b.label.toLowerCase();
-
-    if (labelA < labelB) {
-      return -1;
-    }
-    if (labelA > labelB) {
-      return 1;
-    }
-    return 0;
-  });
+        if (labelA < labelB) return -1;
+        if (labelA > labelB) return 1;
+        return 0;
+    });
 }
 
 function getCustomPlatforms(): Platform[] {
@@ -106,6 +101,7 @@ function openSettings() {
 
 async function setPlatformTo(setTo: boolean) {
   let platforms = getSearchPlatforms(!setTo);
+  platforms = sortPlatformsByLabel<PlatformsWiteSetting>(platforms);
 
   let setToNamed = setTo ? "enable" : "disable";
 
