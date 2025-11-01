@@ -1,6 +1,6 @@
 # Change Log
 
-## next
+## 25.11.1
 - Add new platforms (Disabled by default)
   - Brave
   - devdocs.io
