@@ -55,8 +55,13 @@
     "contributes": {
         "commands": [
             {
-                "command": "search-on.search",
+                "command": "search-on.searchEditor",
                 "title": "Search On ...",
+                "category": "Search on"
+            },
+            {
+                "command": "search-on.searchClipboard",
+                "title": "Search On ... (Clipboard)",
                 "category": "Search on"
             },
             {
@@ -79,7 +84,7 @@
             "editor/context": [
                 {
                     "when": "editorHasSelection",
-                    "command": "search-on.search",
+                    "command": "search-on.searchEditor",
                     "group": "navigation"
                 }
             ]
