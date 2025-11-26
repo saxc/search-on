@@ -4,8 +4,11 @@ import { includedPlatforms } from "./includedPlatforms";
 
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
-    vscode.commands.registerCommand("search-on.search", async () => {
-      await searchOn();
+    vscode.commands.registerCommand("search-on.searchEditor", async () => {
+      await searchEditor();
+    }),
+    vscode.commands.registerCommand("search-on.searchClipboard", async () => {
+      await searchClipboard();
     }),
     vscode.commands.registerCommand("search-on.openSettings", () => {
       openSettings();
@@ -21,7 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 export function deactivate() {}
 
-async function searchOn() {
+async function searchEditor() {
   const editor = vscode.window.activeTextEditor;
   if (editor) {
     let selectedText = editor.document.getText(editor.selection);
@@ -36,28 +39,42 @@ async function searchOn() {
       }
     }
 
-    let platforms: Platform[] = [];
+    searchOn(selectedText);
+  }
+}
 
-    platforms.push(...getSearchPlatforms(true));
-    platforms.push(...getCustomPlatforms());
+async function searchClipboard() {
+  const clipboard = await vscode.env.clipboard.readText();
+  if (!clipboard) {
+    vscode.window.showInformationMessage("Clipboard is empty");
+    return;
+  }
 
-    platforms = sortPlatformsByLabel<Platform>(platforms);
+  searchOn(clipboard);
+}
 
-    const pick = await vscode.window.showQuickPick(platforms, {
-      placeHolder: "Select a search platform",
-    });
+async function searchOn(text: string) {
+  let platforms: Platform[] = [];
 
-    if (pick) {
-      const searchTerm = encodeURIComponent(selectedText);
+  platforms.push(...getSearchPlatforms(true));
+  platforms.push(...getCustomPlatforms());
 
-      let searchUrl = pick.url.replace("{{search_term}}", searchTerm);
+  platforms = sortPlatformsByLabel<Platform>(platforms);
 
-      if (searchUrl === pick.url) {
-        searchUrl = pick.url + searchTerm;
-      }
+  const pick = await vscode.window.showQuickPick(platforms, {
+    placeHolder: "Select a search platform",
+  });
 
-      vscode.env.openExternal(vscode.Uri.parse(searchUrl));
+  if (pick) {
+    const searchTerm = encodeURIComponent(text);
+
+    let searchUrl = pick.url.replace("{{search_term}}", searchTerm);
+
+    if (searchUrl === pick.url) {
+      searchUrl = pick.url + searchTerm;
     }
+
+    vscode.env.openExternal(vscode.Uri.parse(searchUrl));
   }
 }
 
@@ -74,15 +91,17 @@ function getSearchPlatforms(settingsValue: boolean): PlatformsWiteSetting[] {
 
   return platforms;
 }
-function sortPlatformsByLabel<T extends { label?: string }>(platforms: T[]): T[] {
-    return platforms.sort((a, b) => {
-        const labelA = (a.label || "").toLowerCase();
-        const labelB = (b.label || "").toLowerCase();
+function sortPlatformsByLabel<T extends { label?: string }>(
+  platforms: T[]
+): T[] {
+  return platforms.sort((a, b) => {
+    const labelA = (a.label || "").toLowerCase();
+    const labelB = (b.label || "").toLowerCase();
 
-        if (labelA < labelB) return -1;
-        if (labelA > labelB) return 1;
-        return 0;
-    });
+    if (labelA < labelB) return -1;
+    if (labelA > labelB) return 1;
+    return 0;
+  });
 }
 
 function getCustomPlatforms(): Platform[] {

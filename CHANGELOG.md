@@ -4,6 +4,9 @@
 - Add new platforms (Disabled by default)
   - Can I use
 
+- New command `Search On ... (Clipboard)`
+  - Use the text in the clipboard for searching.
+
 ## 25.11.1
 - Add new platforms (Disabled by default)
   - Brave
