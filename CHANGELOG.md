@@ -1,5 +1,9 @@
 # Change Log
 
+## next
+- Add new platforms (Disabled by default)
+  - Can I use
+
 ## 25.11.1
 - Add new platforms (Disabled by default)
   - Brave

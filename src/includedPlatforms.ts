@@ -12,6 +12,11 @@ export const includedPlatforms: PlatformsWiteSetting[] = [
     setting: "brave",
   },
   {
+    label: "Can I use",
+    url: "https://caniuse.com/?search={{search_term}}",
+    setting: "caniuse",
+  },
+  {
     label: "crates.io",
     url: "https://crates.io/search?q={{search_term}}",
     setting: "cratesIo",
