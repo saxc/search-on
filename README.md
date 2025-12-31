@@ -40,6 +40,7 @@
   - Kotlin
   - PyPI
   - Python
+  - Qwant
   - Reddit
   - Startpage
   - VS Code
