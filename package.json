@@ -42,6 +42,7 @@
         "NuGet",
         "PyPI",
         "Python",
+        "Qwant",
         "Reddit",
         "StackOverflow",
         "Startpage",
@@ -125,7 +126,7 @@
                     "default": false,
                     "description": "Search on Brave"
                 },
-               "searchOn.caniuse": {
+                "searchOn.caniuse": {
                     "type": "boolean",
                     "default": false,
                     "description": "Search on Can I use"
@@ -224,6 +225,11 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Search on Python documentation"
+                },
+                "searchOn.qwant": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on Qwant documentation"
                 },
                 "searchOn.reddit": {
                     "type": "boolean",

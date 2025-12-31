@@ -3,6 +3,7 @@
 ## next
 - Add new platforms (Disabled by default)
   - Can I use
+  - Qwant
 
 - New command `Search On ... (Clipboard)`
   - Use the text in the clipboard for searching.

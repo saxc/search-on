@@ -112,6 +112,11 @@ export const includedPlatforms: PlatformsWiteSetting[] = [
     setting: "python",
   },
   {
+    label: "Qwant",
+    url: "https://www.qwant.com/?q={{search_term}}",
+    setting: "qwant",
+  },
+  {
     label: "Reddit",
     url: "https://www.reddit.com/search?q={{search_term}}",
     setting: "reddit",
