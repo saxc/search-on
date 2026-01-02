@@ -1,6 +1,6 @@
 # Change Log
 
-## next
+## 26.1.1
 - Add new platforms (Disabled by default)
   - Can I use
   - Qwant
