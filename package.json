@@ -32,6 +32,7 @@
         "Docs.rs",
         "DuckDuckGo",
         "Ecosia",
+        "Flutter",
         "git",
         "GitHub",
         "Google Translator",
@@ -176,6 +177,11 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Search on Ecosia"
+                },
+                "searchOn.flutter": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on Flutter"
                 },
                 "searchOn.git": {
                     "type": "boolean",

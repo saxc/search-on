@@ -57,6 +57,11 @@ export const includedPlatforms: PlatformsWiteSetting[] = [
     setting: "ecosia",
   },
   {
+    label: "Flutter",
+    url: "https://docs.flutter.dev/search?q={{search_term}}",
+    setting: "flutter",
+  },
+  {
     label: "DuckDuckGo",
     url: "https://duckduckgo.com/?q={{search_term}}",
     setting: "duckDuckGo",

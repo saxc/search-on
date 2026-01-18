@@ -36,6 +36,7 @@
   - Docs.rs
   - DuckDuckGo
   - Ecosia
+  - Flutter
   - git
   - Google Translator
   - Kotlin
