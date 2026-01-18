@@ -67,8 +67,8 @@ Example settings
 ```json
 "searchOn.customPlatforms": [
     { "label": "Google Translator", "url": "https://translate.google.com/?text={{search_term}}"},
-    { "label": "Startpage", "url": "https://www.startpage.com/do/dsearch?q="},
-    { "label": "Amazon", "url": "https://www.amazon.com/s?k="}
+    { "label": "Startpage", "url": "https://www.startpage.com/do/dsearch?q={{search_term}}"},
+    { "label": "Amazon", "url": "https://www.amazon.com/s?k={{search_term}}"}
 ]
 ```
 
