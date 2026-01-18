@@ -32,6 +32,7 @@
   - CSS-Tricks
   - devdocs.io
   - dict.cc
+  - django
   - Docs.rs
   - DuckDuckGo
   - Ecosia

@@ -27,6 +27,7 @@
         "CSS-Tricks",
         "devdocs.io",
         "dict.cc",
+        "django",
         "Docker Hub",
         "Docs.rs",
         "DuckDuckGo",
@@ -150,6 +151,11 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Search on dict.cc"
+                },
+                "searchOn.django": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on django"
                 },
                 "searchOn.docsRs": {
                     "type": "boolean",

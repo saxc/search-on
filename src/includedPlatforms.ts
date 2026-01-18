@@ -37,6 +37,11 @@ export const includedPlatforms: PlatformsWiteSetting[] = [
     setting: "dictCc",
   },
   {
+    label: "django",
+    url: "https://docs.djangoproject.com/en/6.0/search/?q={{search_term}}",
+    setting: "django",
+  },
+  {
     label: "Docs.rs",
     url: "https://docs.rs/releases/search?query={{search_term}}",
     setting: "docsRs",
