@@ -1,5 +1,10 @@
 # Change Log
 
+## next
+- Add new platforms (Disabled by default)
+  - django
+  - Flutter
+
 ## 26.1.1
 - Add new platforms (Disabled by default)
   - Can I use

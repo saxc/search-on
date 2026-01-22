@@ -27,10 +27,12 @@
         "CSS-Tricks",
         "devdocs.io",
         "dict.cc",
+        "django",
         "Docker Hub",
         "Docs.rs",
         "DuckDuckGo",
         "Ecosia",
+        "Flutter",
         "git",
         "GitHub",
         "Google Translator",
@@ -151,6 +153,11 @@
                     "default": false,
                     "description": "Search on dict.cc"
                 },
+                "searchOn.django": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on django"
+                },
                 "searchOn.docsRs": {
                     "type": "boolean",
                     "default": false,
@@ -170,6 +177,11 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Search on Ecosia"
+                },
+                "searchOn.flutter": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Search on Flutter"
                 },
                 "searchOn.git": {
                     "type": "boolean",

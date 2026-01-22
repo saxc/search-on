@@ -32,9 +32,11 @@
   - CSS-Tricks
   - devdocs.io
   - dict.cc
+  - django
   - Docs.rs
   - DuckDuckGo
   - Ecosia
+  - Flutter
   - git
   - Google Translator
   - Kotlin
