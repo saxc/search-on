@@ -1,6 +1,6 @@
 # Change Log
 
-## next
+## 26.2.1
 - Add new platforms (Disabled by default)
   - django
   - Flutter
